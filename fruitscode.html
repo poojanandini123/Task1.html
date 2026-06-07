@@ -1,0 +1,1392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruitables</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        .address{
+            margin-right: 100px;
+            margin-left: 100px;
+            border: none;
+            border-radius: 50px 10px 50px 10px;
+            padding: 2px;
+            padding-left: 12px;
+            padding-right: 12px;  
+            background-color: #81c408;
+            display: flex;
+            justify-content:space-between;
+        }
+        .address p{
+            color:white;
+        }
+        .header{
+            color: #81c408;
+            padding:2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            margin-left: 100px;
+            margin-right: 100px;
+            font-size: 20px;
+            font-family:'Ralwaye', sans-serif;
+        }
+        select{
+            border:none;
+            
+            font-size: 20px;
+            outline: none;
+            width:80px;
+        }
+        #home{
+            display: flex;
+            font-weight: 100;
+            font-size: 20px;
+            justify-content: space-between;
+            gap:20px;
+            
+            
+            
+        }
+        #home a{
+            text-decoration: none;
+            color: rgb(113, 113, 113);
+        }
+        #home a select{
+            text-decoration: none;
+            color: rgb(113, 113, 113);
+        }
+        #home a:hover{
+            color: #81c408;
+        }
+        #home a select:hover{
+            color: #81c408;
+        }
+        .bags{
+            display: flex;
+            gap:20px;
+            align-items: center;
+           
+        }
+        .back{
+            background-image: url("https://demo.htmlcodex.com/2824/Fruitables/img/hero-img.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            justify-content: space-around;
+            
+            align-items: center;
+            font-family:'Ralwaye', sans-serif;
+            
+        }
+        #btn input,#but1{
+            border: 2px solid orange;
+            border-radius: 50px;
+            width:450px;
+            height: 60px;
+        }
+        #but1 {
+            width:150px;
+            height: 60px;
+            color: white;
+            background-color: #81c408;
+            margin-left: -60px;
+        }
+        #org a button{
+            background-color: orange;
+            color: white;
+        }
+        #cat{
+            margin: 150px;
+            margin-left: 100px;
+        }
+        .img1{
+            border: none;
+            background-color: rgba(255, 166, 0, 0.751);
+            border-radius: 15px;
+            margin-right:100px;
+            height: 400px;
+            position: relative;
+        }
+        #left{
+            position: absolute;
+            left:15px;
+            top:187px;
+            padding: 13px 13px;
+            border:1px solid white;
+            border-radius: 50px;
+            background-color: #82c4086a;
+            color:rgba(255, 255, 255, 0.456);
+           font-size: 40px;
+            
+        }
+        #right{
+            position: absolute;
+            right:15px;
+            top:187px;
+            padding: 13px 13px;
+            border:1px solid white;
+            border-radius: 50px;
+            background-color: #82c4086a;
+            color:rgba(255, 255, 255, 0.456);
+           font-size: 40px;
+            
+        }
+        #imgname{
+            position: absolute;
+            top:200px;
+            left:250px;
+            background-color: rgba(255, 166, 0, 0.774);
+            padding:15px 40px;
+            color: white;
+            border-radius: 15px;
+
+        }
+        #cards1{
+            display: flex;
+            justify-content: space-evenly;
+            padding: 20px;
+            margin-top: 90px;
+            flex-wrap: wrap;
+        } 
+        
+        #card1{
+            margin-top: 20px;
+            width: 350px;
+            height: 320px;
+            background-color: rgb(239, 239, 239);
+            color: white;
+            font-size: 60px;
+            border-radius: 10PX;
+        }
+        #car{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        #card1 #cir{
+            margin-top: 30px;
+            margin-left: 95px;
+            width: 150px;
+            height: 150px;
+            background-color: #f39d1c;
+            color: white;
+            text-align: center;
+            font-size: 60px;
+            border-radius: 50%;
+        }
+
+        #card1 #cir i{
+            margin-top: 40px;
+        }
+
+        #card1 #triangle{
+            color: #f39d1c;
+            display: block;
+            margin-left: 133px;
+            margin-top:-30px;
+        }
+
+        #card1 h4{
+            margin-top: 10px;
+            color: rgb(0, 0, 0);
+            font-size: 23px;
+            text-align: center;
+            font-family:'Raleway', sans-serif;
+        }
+
+        #card1 h6{
+            margin-top: -20px;
+            color: grey;
+            font-size: 20px;
+            text-align: center;
+            font-weight:lighter;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        #our{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-evenly;
+           align-items: center;
+           margin-top: 50px;
+           color:grey;
+           font-size:25px;
+        }
+        #org button{
+            height: 50px;
+            width:200px;
+            border: none;
+            border-radius: 100px;
+            cursor: pointer;
+            margin:10px;
+            font-size: 18px;
+            color: rgb(49, 47, 47);
+        }
+        #org button:hover{
+            background-color: #f39d1c;
+            color:white
+        }
+        .product{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .product #grap{
+            border:1px solid orange;
+            border-radius: 15px;
+            height:400px;
+            width:300px;
+            margin:20px;
+            position: relative;
+        }
+        .product #grap:hover{
+            box-shadow: 1px 2px 100px grey;
+        }
+        #pro1{
+            position: absolute;
+            top:10px;
+            left: 10px;
+            color: white;
+            border: none;
+            background-color: #f39d1cd7;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+        .product #grap img{
+            width:300px;
+            height: 250px;
+            border-radius: 15px;
+            border-bottom-left-radius: 0px;
+            border-bottom-right-radius: 0px;
+            margin-bottom: -10px;
+        
+        }
+        .product #text {
+           color:rgb(46, 45, 45);
+           text-align: center;
+        }
+        .product #text h5{
+            color:rgb(110, 108, 108);
+            font-family: 'Raleway',sans-serif;
+        }
+        .product #text button{
+            border:1px solid orange;
+            border-radius: 25px;
+            height: 30px;
+            width: 130px;
+            background-color: white;
+            color: #81c408;
+            margin-left:90px;
+        }
+        .veg{
+            margin:50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            position: relative;
+            
+        }
+        #on{
+            border: 1px solid orange;
+            background-color: orange;
+            border-radius: 10px;
+            width:400px;
+            height:550px;
+            cursor: pointer;
+        }
+        #on img{
+            width:400px;
+            height: 400px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #fresh{
+            position: absolute;
+            top:330px;
+            left:80px;
+            padding: 25px 80px;
+            color:white;
+            border: none;
+            border-radius: 10px;
+            background-color: #81c408;
+        }
+        #on1{
+            border: 1px solid grey;
+            background-color: grey;
+            border-radius: 10px;
+            width:400px;
+            height:550px;
+            cursor: pointer;
+        }
+        #on1 img{
+            width:400px;
+            height: 400px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #fresh1{
+            position: absolute;
+            margin-top:-80px;
+            margin-left:60px;
+            padding: 25px 80px;
+            color:#81c408;
+            border: none;
+            border-radius: 10px;
+            background-color: white;
+        }
+        #on2{
+            border: 1px solid #81c408;
+            background-color: #81c408;
+            border-radius: 10px;
+            width:400px;
+            height:550px;
+            cursor: pointer;
+        }
+        #on2 img{
+            width:400px;
+            height: 400px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        #fresh2{
+            position: absolute;
+            margin-top:-70px;
+            margin-left:60px;
+            padding: 25px 80px;
+            color:white;
+            border: none;
+            border-radius: 10px;
+            background-color: orange;
+            
+        }
+        #head1{
+            color:rgb(91, 90, 90);
+            margin:20px 20px 20px 100px;
+            
+        }
+        #tomato{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            margin:30px 10px 30px 10px;
+            
+        }
+        #parsely{
+            width:300px;
+            height:600px;
+            border:1px solid #81c408;
+            border-radius: 10px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        #parsely img{
+            height:380px ;
+            width:300px;
+            border:none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+            
+        }
+        #tomato #parsely:hover{
+            box-shadow: 1px 2px 30px grey;
+        }
+        #top{
+            position: absolute;
+            right:10px;
+            top: 10px;
+            border:none;
+            background-color: #81c408;
+            border-radius:10px;
+            color:white;
+            padding:8px 15px;
+            font-size: 20px;
+        }
+        #sed {
+        margin: 10px;
+        color:rgb(77, 75, 75);
+        font-size:20px;
+        }
+        #sed h5{
+            font-family: 'Raleway' ,sans-serif;
+            color:rgb(127, 124, 124);
+            font-size:15px;
+        }
+        #sed button{
+            margin-left: 50px;
+            border:1px solid orange;
+            border-radius:30px;
+            color:#81c408;
+            height:40px;
+            width:150px;
+            background-color: white;
+        }
+        #parsely1{
+            width:300px;
+            height:600px;
+            border:1px solid #81c408;
+            border-radius: 10px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        #parsely1 img{
+            height:380px ;
+            width:300px;
+            border:none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+        }
+        #tomato #parsely1:hover{
+            box-shadow: 1px 2px 30px grey;
+        }
+        #sed1 {
+        margin: 10px;
+        color:rgb(77, 75, 75);
+        font-size:20px;
+        }
+        #sed1 h5{
+            font-family: 'Raleway' ,sans-serif;
+            color:rgb(127, 124, 124);
+            font-size:15px;
+        }
+        #sed1 button{
+            margin-left: 50px;
+            border:1px solid orange;
+            border-radius:30px;
+            color:#81c408;
+            height:40px;
+            width:150px;
+            background-color: white;
+        }
+        #parsely2{
+            width:300px;
+            height:600px;
+            border:1px solid #81c408;
+            border-radius: 10px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        #parsely2 img{
+            height:380px ;
+            width:300px;
+            border:none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+        }
+        #tomato #parsely2:hover{
+            box-shadow: 1px 2px 30px grey;
+        }
+        #sed2 {
+        margin: 10px;
+        color:rgb(77, 75, 75);
+        font-size:20px;
+        }
+        #sed2 h5{
+            font-family: 'Raleway' ,sans-serif;
+            color:rgb(127, 124, 124);
+            font-size:15px;
+        }
+        #sed2 button{
+            margin-left: 50px;
+            border:1px solid orange;
+            border-radius:30px;
+            color:#81c408;
+            height:40px;
+            width:150px;
+            background-color: white;
+        }
+        #parsely3{
+            width:300px;
+            height:600px;
+            border:1px solid #81c408;
+            border-radius: 10px;
+            position: relative;
+            margin-bottom: 10px;
+        }
+        #parsely3 img{
+            height:380px ;
+            width:300px;
+            border:none;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            
+        }
+        #tomato #parsely3:hover{
+            box-shadow: 1px 2px 30px grey;
+        }
+        #sed3 {
+        margin: 10px;
+        color:rgb(77, 75, 75);
+        font-size:20px;
+        }
+        #sed3 h5{
+            font-family: 'Raleway' ,sans-serif;
+            color:rgb(127, 124, 124);
+            font-size:15px;
+        }
+        #sed3 button{
+            margin-left: 50px;
+            border:1px solid orange;
+            border-radius:30px;
+            color:#81c408;
+            height:40px;
+            width:150px;
+            background-color: white;
+        }
+        #store{
+            margin: 30px 0px 30px 0px;
+            background-color: #f4aa3b;
+            height: 800px;
+            display: flex;
+            justify-content: space-between;
+            align-items:center;
+            position: relative;
+        }
+        #exo{
+            margin: 10px 0px 0px 150px;
+            padding:24px 0px;
+            font-family: 'raleway',sans-serif;
+            margin-right: 10px;
+        }
+        
+        #fruit img{
+            margin-right: 200px;
+        }
+        #exo h1{
+            color:white;
+            font-size:60px;
+           
+        
+        }
+        #exo h3{
+            margin-top: -15px;
+            font-size: 80px;
+            font-family:'raleway',sans-serif ;
+            color:rgb(72, 72, 72);
+        }
+        #exo p{
+            font-size: 20px;
+            color:rgb(99, 96, 96);
+            margin-top:-30px
+        }
+        #exo button{
+            width:140px;
+            height: 70px;
+            background-color: #e9a032b2;
+            border:1px solid white;
+            color: rgb(73, 69, 69);
+            font-size: 20px;
+            border-radius: 40px;
+        }
+       
+        #kg{
+            position: absolute;
+            margin-top:-570px;
+            margin-left:10px;
+            height:150px;
+            width:150px;
+            font-size:70px;
+            background-color: white;
+            border:none;
+            border-radius:50%;
+        }
+        #kg h2{
+            font-size:80px;
+            margin-top:20px;
+            margin-left: 20px;
+            color:rgb(57, 52, 52);
+        }
+        #kg sub{
+            font-size:30px;
+            color:grey;
+        }
+        #kg sup{
+            font-size:40px;
+            margin-left:-35px;
+            color:rgb(46, 43, 43);
+        }
+        #best{
+            text-align: center;
+            margin-top:100px;
+        }
+        #best h1{
+            font-size:60px;
+            color:rgb(67, 64, 64);
+            margin-bottom: -3px;
+        }
+        #best p{
+            color:grey;
+            font-size:20px;
+            margin-bottom:80px;
+        }
+        #latin{
+            margin:50px;
+            margin-left: 100px;
+            margin-right: 100px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        #i{
+            width:450px;
+            height: 250px;
+            border: none;
+            display: flex;
+            border-radius: 20px;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            align-items: center;
+            background-color: rgb(226, 225, 225);
+            margin:20px;
+        }
+        #i img{
+            border:none;
+            border-radius: 50%;
+            width:200px;
+            height: 200px;
+            
+        }
+        #sell{
+            color:rgb(83, 82, 82);
+        }
+        #i button{
+            border:1px solid orange;
+            border-radius: 50px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            color: #81c408;
+            background-color: rgb(226, 225, 225);
+            margin:20px 0px 10px -2px;
+        }
+        #i button:hover{
+            color:white;
+            background-color: orange;
+            cursor: pointer;
+        }
+        #i h2:hover{
+            color:#81c408;
+            cursor: pointer;
+        }
+        #sos{
+            margin-left: 50px;
+            margin-right: 50px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;   
+        }
+        #slide img{
+            width:300px;
+            height:200px;
+            border: none;
+            border-radius: 20px;
+           
+        }
+        #slide{
+            text-align: center;
+            color:rgb(83, 82, 82);
+            margin-right: 10px;
+           
+        }
+        #slide button:hover{
+            color:white;
+            background-color: orange;
+            cursor: pointer;
+        }
+        #slide h2:hover{
+            color:#81c408;
+            cursor: pointer;
+        }
+        #slide button{
+            border:1px solid orange;
+            border-radius: 50px;
+            height: 60px;
+            width: 200px;
+            font-size: 20px;
+            color: #81c408;
+            background-color: white;
+            margin-top: 10px;
+        }
+        #paper{
+            margin: 200px 50px 100px 50px;
+            padding:20px 40px;
+            background-color: rgb(222, 222, 222);
+            border: none;
+            border-radius: 10px;
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            
+        }
+        #dac{
+            border:none;
+            border-radius: 20px;
+            font-size: 50px;
+            text-align: center;
+            height: 350px;
+            width: 300px;
+            background-color: white;
+            margin: 5px;
+        }
+        #dac i{
+            margin-top: 50px;
+            color: #f39d1c; 
+            font-size: 90px;
+        }
+        #dac h4{
+            font-family: 'raleway',sans-serif;
+            font-size: 40px;
+            color: #81c408;
+        }
+        #dac h6{
+            color:rgb(107, 107, 107);
+            margin-top:-40px;
+        }
+        #char{
+            text-align: center;
+            font-family: 'raleway',sans-serif;
+        }
+        #char h1{
+            font-size: 40px;
+            color: rgb(80, 76, 76);
+        }
+        #user{
+            display: flex;
+            justify-content:space-evenly;
+            flex-wrap: wrap;
+            margin: 50px;
+           
+        }
+        #client{
+            border: none;
+            border-radius: 10px;
+            height: 200px;
+            width: 600px;
+            background-color: rgb(244, 242, 242);
+            font-family: 'raleway',sans-serif;
+            padding:24px;
+            
+        }
+        #client span,p{
+            color:rgb(113, 112, 112);
+            font-family: 'raleway',sans-serif;
+        }
+        #prof{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        #prof img{
+            border: none;
+            border-radius: 15px;
+            margin:10px 5px 10px 0px;
+        }
+        #cont{
+            margin:-10px 5px 10px 20px;
+        }
+        #add{
+            padding:24px;
+            background-color: rgba(47, 63, 47, 0.862);
+        }
+        #sub{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            font-family: 'ralewat',sans-serif;
+            margin:50px;
+            margin-bottom: 0px;
+        }
+        #sub input{
+            height: 49px;
+            width:450px;
+            border: none;
+            border-radius: 50px;
+        }
+        #sub button{
+            border:none;
+            border-radius: 50px;
+            background-color: #81c408;
+            height: 50px;
+            width: 150px;
+            color:white;
+            margin-left: -100px;
+            cursor: pointer;
+            
+        }
+        #sub a{
+            text-decoration: none;
+            color:orange;
+        }
+        #sub button:hover{
+            background-color:orange
+        }
+        #sub #set1{
+            padding: 30px;
+        }
+        #sub #set2{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            padding:30px;
+        }
+        #set2 div{
+            border:2px solid orange;
+            border-radius:50px;
+            height:50px;
+            width:50px;
+            text-align:ceter;        
+            font-size:25px;
+            box-sizing:border-box;
+            padding:8px;
+            margin-right: 15px;;
+        }
+        #set2 a{
+            text-decoration: none;
+             color:orange;
+        }
+        #sub1{
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            
+        }
+        #sub1 div{
+            color: white;
+        }
+        #sub1 #pickle{
+            width:300px
+        }
+        #pickle button{
+            border:1px solid orange;
+            color:#81c408;
+            background-color:rgba(47, 63, 47, 0.862);
+            height: 50px;
+            width:150px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 20px;;
+        }
+        #pickle button:hover{
+            color:white;
+            background-color: #f39d1c;
+        }
+        #end{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin:25px 80px 15px 80px;
+            color:white;
+            font-size:20px;
+        }
+        #end  a{
+            color:#81c408;
+            text-decoration:underline white ;
+        }
+        #end a:hover{
+            color:#82c4087a;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="address">
+        <p> <i style="color: #f39d1c; margin-left:10px;" class="fa-solid fa-location-dot"></i>123 Street, New York &nbsp;&nbsp; <i style="color: #f39d1c; margin-left:10px;" class="fa-solid fa-envelope"></i>  Email@Example.com</p>
+        <p >Privacy Policy / Terms of Use / Sales and Refunds</p>
+    </div>
+    <div class="header">
+        <h1>Fruitables</h1>
+        <div id="home">
+            <a href="#home">Home</a>
+            <a href="">Shop</a>
+            <a href="">Shop Details</a>
+            <a href="">
+                <select>
+                    <option>Pages</option>  
+                    <option>Cart</option>
+                    <option>Check out</option>
+                    <option>Testimonial</option>
+                    <option>404 Pages</option>
+                </select>
+            </a>
+            <a href="">Contact</a>
+        </div>
+        <div class="bags">
+            <p style="border:2px solid orange;width:42px;height:40px;padding:7px;box-sizing:border-box;border-radius:60px;margin-right:15px"><i class="fa-solid fa-magnifying-glass"></i></p>
+            <p><i class="fa-solid fa-bag-shopping"></i></p>
+            <p><i class="fa-solid fa-user"></i></p>
+        </div>
+    </div>
+    <div class="back">
+        <div id="cat">
+            <h2 style="color: orange;margin-bottom:-15px;">100% Organic Foods</h2>
+            <h1 style="color:#81c408; font-size:70px">Organic Veggies & Fruits Foods</h1>
+            <div id="btn">
+            <input type="Search" placeholder="     Search">
+            <a href="#home"><button id="but1" >Submit Now</button></a>
+            </div>
+        </div>
+        <div class="img1">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/hero-img-1.png">
+            <div id="imgname">
+                Fruites
+            </div>
+            <div id="left"><i class="fa-solid fa-chevron-left"></i></div>
+            <div id="right"><i class="fa-solid fa-chevron-right"></i></div>
+        </div>
+    </div>
+    <div id="car">
+        <div id="card1">
+            <div id="cir"> <i class="fa-solid fa-car-side"></i></div>
+            <div id="triangle">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <h4>Free Shipping</h4>
+            <h6>Free on order over $300</h6>
+        </div>
+        <div id="card1">
+            <div id="cir"> <i class="fa-solid fa-user-shield"></i></div>
+            <div id="triangle">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <h4>Security Paymen</h4>
+            <h6>100% Security Payment</h6>
+        </div>
+        <div id="card1" >
+            <div id="cir"> <i class="fa-solid fa-left-right"></i></div>
+            <div id="triangle">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <h4>30 Days Return</h4>
+            <h6>30 days money guarantee</h6>
+        </div>
+        <div id="card1">
+            <div id="cir"> <i class="fa-solid fa-left-right"></i></div>
+            <div id="triangle">
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <h4>24/7 Support</h4>
+            <h6>Support every time fast</h6>
+        </div>
+    </div>
+        <div id="our">
+            <h2>Our Organic Products</h2>
+            <div id="org">
+                <a href="#all" ><button>All Product</button></a>
+                <button> Vegetables</button>
+                <button>Fruits</button>
+                <button>Bread</button>
+                <button>Meat</button>
+            </div>
+        </div>
+    </div>
+    <div class="product" id="all">
+        <div id="grap">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-5.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Grapes</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span><a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="grap">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-5.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Grapes</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span><a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="grap">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-2.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Raspberries</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span><a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="grap">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-4.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Apricots</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="grap"> 
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-3.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Banana</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="grap">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-1.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Oranges</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="grap">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-2.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Rasspberries</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="grap">
+             <img src="https://demo.htmlcodex.com/2824/Fruitables/img/fruite-item-5.jpg">
+            <div id="pro1">
+                Fruites
+            </div>
+            <div id="text">
+                <h3>Grapes</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+    </div>
+    <div class="veg" id="home">
+        <div id="on">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/featur-1.jpg">
+            <div id="fresh">
+                Fresh Apples<br>
+                <h3 style="color: green;">20% OFF</h3>
+            </div>
+        </div>
+        <div id="on1">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/featur-2.jpg">
+            <div id="fresh1">
+                Tasty Fruits<br>
+                <h3 style="color: rgb(100, 99, 99);">Free delivery</h3>
+            </div>
+        </div>
+        <div id="on2">
+            <img src="	https://demo.htmlcodex.com/2824/Fruitables/img/featur-3.jpg">
+            <div id="fresh2">
+                Exotic Vegetable<br>
+                <h3 style="color: green;">Discount 30$</h3>
+            </div>
+        </div>
+    </div>
+    <div id="head1"><h1>Fresh Organic Vegetables</h1></div>
+    <div id="tomato">
+        <div id="parsely">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/vegetable-item-1.jpg">
+            <div id="sed">
+                <h3>Parsely</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i> Add to cart</button></a>
+            </div>
+            <div id="top">
+                vegetable
+            </div>
+        </div>
+        <div id="parsely1">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/vegetable-item-5.jpg">
+            <div id="sed1">
+                <h3>Parsely</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i> Add to cart</button></a>
+                <div id="top">
+                vegetable
+            </div>
+            </div>
+        </div>
+        <div id="parsely2">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/vegetable-item-4.jpg">
+            <div id="sed2">
+                <h3>Parsely</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i> Add to cart</button></a>
+                <div id="top">
+                vegetable
+            </div>
+            </div>
+        </div>
+        <div id="parsely3">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/vegetable-item-6.jpg">
+            <div id="sed3">
+                <h3>Parsely</h3>
+                <h5>Lorem ipsum dolor sit amet consecteture adipisicing elit sed do eisumod te incididunt</h5>
+                <span><b>$4.99/kg</b></span>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i> Add to cart</button></a>
+                <div id="top">
+                vegetable
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="store">
+        <div id="exo">
+            <h1>Fresh Exotic Fruits</h1>
+            <h3>in Our Store</h3>
+            <p>The generated Lorem Ipsum is therefore always free from repetition injected<br> humour, or non-characteristic Words etc.</p>
+            <a href="#home"><button>BUY</button></a>
+        </div> 
+        <div id="fruit">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/baner-1.png">
+            <div id="kg">
+            <h2>1<sub>kg</sub><sup>50$</sup></h2>
+            </div>
+        </div> 
+    </div>
+    <div  id="best">
+        <h1>Bestseller Products</h1>
+        <p>Latin Words, combined With a handful of model sentence structures,to generate Lorem<br> Ipsum Which reasonable.</p>
+    </div>
+    <div id="latin">
+        <div id="i">
+            <div >
+                <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-1.jpg">
+            </div>
+            <div id="sell">
+                <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="i">
+            <div >
+                <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-2.jpg">
+            </div>
+            <div id="sell">
+                <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div> 
+        <div id="i">
+            <div >
+                <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-3.jpg">
+            </div>
+            <div id="sell">
+                <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="i">
+            <div >
+                <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-4.jpg">
+            </div>
+            <div id="sell">
+                <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="i">
+            <div >
+                <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-5.jpg">
+            </div>
+            <div id="sell">
+                <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+        <div id="i">
+            <div >
+                <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-6.jpg">
+            </div>
+            <div id="sell">
+                <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+            </div>
+        </div>
+    </div>
+    <div id="sos">
+        <div id="slide">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-1.jpg">
+            <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+        </div>
+        <div id="slide">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-2.jpg">
+            <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+        </div>
+        <div id="slide">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-3.jpg">
+            <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+        </div>
+        <div id="slide">
+            <img src="https://demo.htmlcodex.com/2824/Fruitables/img/best-product-4.jpg">
+            <h2>Organic Tomato</h2>
+                <span style="margin: 20px 0px 100px 0px;"><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:grey" class="fa-solid fa-star"></i></span>
+                <br><b style="font-size:30px;margin-top:20px;">3.<span style="font-size: 20px;">12 </span>$</b><br>
+                <a href="#home"><button><i class="fa-solid fa-bag-shopping"></i>Add to cart</button></a>
+        </div>
+    </div>
+    <div id="paper">
+        <div id="dac">
+            <i class="fa-solid fa-users"></i></i>
+        <h4>SATIFIED CUSTOMERS</h4>
+        <h6>1963</h6>
+        </div>
+        <div id="dac">
+            <i class="fa-solid fa-users"></i></i>
+        <h4>SATIFIED CUSTOMERS</h4>
+        <h6>1963</h6>
+        </div>
+        <div id="dac">
+            <i class="fa-solid fa-users"></i></i>
+        <h4>SATIFIED CUSTOMERS</h4>
+        <h6>1963</h6>
+        </div>
+        <div id="dac">
+            <i class="fa-solid fa-users"></i></i>
+        <h4>SATIFIED CUSTOMERS</h4>
+        <h6>1963</h6>
+        </div>
+    </div>
+    <div id="char" >
+        <h2 style="color:#81c408">Our Testimonial</h2>
+        <h1 >Our Client Saying!</h1>
+    </div>
+    <div id="user">
+        <div id="client">
+            <p>Lorem Ipsum is simply dummy text of the printing ipsum has been the industry standard dummy text ever since the 1500s,</p>
+            <hr style="background-color: #f39d1c; height:1px;border:none;">
+            <div id="prof">
+                <div>
+                    <img src="	https://demo.htmlcodex.com/2824/Fruitables/img/testimonial-1.jpg">
+                </div>
+                <div id="cont">
+                    <h1 style="color: rgb(77, 76, 76);margin-bottom:5px;">Client Name</h1>
+                    <span style="font-size:25px; margin-bottom:-4px;margin-right:280px;">Profession</span><i style="color:#f4aa3b;font-size:30px;" class="fa-solid fa-quote-right"></i>
+                    <p><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:#81c408;" class="fa-solid fa-star"></i></p>
+                </div>
+            </div>
+        </div>
+        <div id="client">
+            <p>Lorem Ipsum is simply dummy text of the printing ipsum has been the industry standard dummy text ever since the 1500s,</p>
+            <hr style="background-color: #f39d1c; height:1px;border:none;">
+            <div id="prof">
+                <div>
+                    <img src="https://demo.htmlcodex.com/2824/Fruitables/img/testimonial-1.jpg">
+                </div>
+                <div id="cont">
+                    <h1 style="color: rgb(77, 76, 76);margin-bottom:5px;">Client Name</h1>
+                    <span style="font-size:25px; margin-bottom:-4px;margin-right:280px;">Profession</span><i style="color:#f4aa3b;font-size:30px;" class="fa-solid fa-quote-right"></i>
+                    <p><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color: #81c408;" class="fa-solid fa-star"></i><i style="color:#81c408;" class="fa-solid fa-star"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="add">
+        <div id="sub">
+           <div>
+                <h1 style="color: #81c408;font-size:45px;margin-bottom:0px;cursor:pointer;"><a href="#home">Fruitables</a></h1>
+                <h3 style="color:orange;margin-top:0px;cursor:pointer;"><a href="#home">Fresh Products</a></h3>
+           </div> 
+           <div id="set1">
+                <input type="Email" placeholder="    Your Email">
+                <a href="#home"><b><button >Subscribe Now</button></b></a>
+           </div> 
+           <div id="set2">
+            <div ><a href="#home"><i class="fa-brands fa-twitter"></i></a></div>
+            <div><a href="#home"><i class="fa-brands fa-facebook-f"></i></a></div>
+            <div><a href="#home"><i class="fa-brands fa-youtube"></i></a></div>
+            <div><a href="#home"><i class="fa-brands fa-linkedin-in"></i></a></div>
+           </div> 
+        </div>
+        <hr style="border: none;background-color:orange;height:1px;margin:0px 130px 10px 90px;">
+        
+        <div id="sub1">
+            <div id="pickle">
+                <h1>Why People Like us!</h1>
+                <p style="font-size:22px;">typesetting, remaining essentially unchanged.It was popularised in the 1960s with the like Aldus PageMaker including of Lorem Ipsum.</p>
+                <a href="#home"><b><button >Read Me</button></b></a>
+            </div>
+            <div>
+                <h1>Shop Info</h1>
+                <p>About Us</p>
+                <p>Contact Us</p>
+                <p>Privacy Policy</p>
+                <p>Terms & Condition </p>
+                <p>Return Policy</p>
+                <p>FAQS & Help</p>
+            </div>
+            <div>
+                <h1>Account</h1>
+                <p>My Account</p>
+                <p>Shop details</p>
+                <p>Shopping cart</p>
+                <p>Wishlist</p>
+                <p>Order History</p>
+                <p>Internation Order</p>
+            </div>
+            <div>
+                <h1>Contact</h1>
+                <p>Address: 1429 Netus Rd, NY 48247</p>
+                <p>Email: Example@gmail.com</p>
+                <p>Phone: +0123 4567 8910</p>
+                <p>Payment Accepted</p>
+                <p><img src="https://demo.htmlcodex.com/2824/Fruitables/img/payment.png"></p>
+            </div>
+        </div>
+        <div id="end">
+            <div>
+            <span><a href="#home " style="text-decoration:none;"><i style="color:white;" class="fas fa-copyright text-light me-2"></i>Your Site Name</a>, All right reserved.</span>
+            </div>
+            <div>
+                Designed By
+                <a href="https://htmlcodex.com">HTML Codex</a>
+            </div>
+        
+        </div>
+    </div>
+</body>
+</html>
